@@ -1,0 +1,255 @@
+@import './base/main'
+
+.header
+  mix-blend-mode: exclusion
+
+  &.header_minimized
+    mix-blend-mode: normal
+
+.hero
+  position: relative
+  height: 565px
+
+  &-carousel
+    position: absolute
+    overflow-x: hidden
+
+    width: 100%
+    height: inherit
+
+    &__wrapper
+      display: flex
+      height: inherit
+
+    &-slide
+      position: relative
+
+      flex-shrink: 0
+      height: inherit
+
+      background-size: cover
+      background-position: center
+
+      &__text
+        position: absolute
+
+        bottom: 110px
+        max-width: 500px
+
+        font-size: 40px
+        line-height: 50px
+
+        user-select: none
+
+    &-navigation
+      &__arrow
+        position: absolute
+        padding: 9px
+
+        top: 50%
+        transform: translateY(-50%)
+
+        background-color: rgba($color-gray, .12)
+        backdrop-filter: blur(30px)
+
+        border-radius: 100%
+        cursor: pointer
+
+        &:hover
+          background-color: $color-black
+
+        &_left
+          left: 30px
+
+        &_right
+          right: 30px
+
+        svg
+          width: 32px
+          height: 32px
+
+    &-pagination
+      position: absolute
+      display: flex
+
+      left: 50%
+      bottom: 50px
+
+      transform: translateX(-50%)
+
+      .hero-carousel-pagination__item
+        svg
+          width: 20px
+          height: 20px
+
+        svg:nth-child(1)
+          display: none
+
+        svg:nth-child(2)
+          display: block
+
+        &:not(:first-child)
+          margin-left: 5px
+
+      .hero-carousel-pagination__item_active
+        svg:nth-child(1)
+          display: block
+
+        svg:nth-child(2)
+          display: none
+
+.product
+  display: flex
+  align-items: center
+  padding-block: 50px 87px
+
+  .product__title
+    font-size: 60px
+    font-weight: 500
+    line-height: 70px
+
+  .product-price
+    flex-shrink: 0
+
+    &__from
+      font-size: 20px
+      font-weight: 500
+
+      text-align: end
+      line-height: 30px
+
+    &__content
+      font-size: 45px
+      line-height: 55px
+
+    &__link
+      margin-top: 30px
+
+.promo-1
+  display: flex
+  align-items: center
+  padding-block: 160px
+
+  &-image
+    position: relative
+
+    display: flex
+    flex-shrink: 0
+
+    width: 640px
+    height: 500px
+
+    background: rgba($color-gray, .12)
+    border-radius: 2px
+
+    &__overlay
+      position: absolute
+      pointer-events: none
+
+      width: 100%
+      height: 100%
+
+      background-color: #2075F4
+      mix-blend-mode: hue
+
+    img
+      margin-block: auto
+      max-width: 100%
+      max-height: 100%
+
+  &-content
+    margin-left: 140px
+
+    &__description
+      margin-top: 30px
+      font-size: 25px
+      line-height: 40px
+
+.promo-2
+  border-radius: 2px
+
+  &__wrapper
+    display: flex
+
+    height: 720px
+    padding: 60px
+
+    background-size: cover
+    background-position: center
+
+  &-content
+    margin-top: auto
+    padding: 40px
+
+    background-color: rgba($color-gray, .15)
+    backdrop-filter: blur(30px)
+
+    border-radius: 25px
+
+    &__description
+      margin-top: 30px
+      max-width: 580px
+
+      font-size: 25px
+      line-height: 40px
+
+.form
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding-block: 160px 80px
+
+  &__title
+    max-width: 420px
+    line-height: 55px
+
+    font-size: 45px
+    font-weight: 500
+
+  &__content
+    display: flex
+    flex-direction: column
+    row-gap: 40px
+
+.next-product
+  $imageWidth: 200px
+  $imageHeight: 140px
+
+  padding-block: 120px
+
+  &__wrapper
+    position: relative
+    display: flex
+    margin-top: 30px
+
+    &:hover
+      .next-product__image
+        width: $imageWidth
+
+      .next-product__link
+        padding-left: calc($imageWidth / 2 + 30px)
+
+  &__image
+    position: absolute
+    left: calc($imageWidth / 2 * -1)
+
+    width: 0
+    height: $imageHeight
+
+    overflow-x: hidden
+    transition: width 250ms
+
+    background-size: cover
+    background-position: center
+
+  &__link
+    display: flex
+
+    font-weight: 500
+    font-size: 60px
+    line-height: 70px
+
+    transition: padding-left 250ms
+
+    &::after
+      display: inline
+      content: '\00a0-->'

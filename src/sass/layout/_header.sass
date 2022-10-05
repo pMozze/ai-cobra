@@ -1,0 +1,69 @@
+.header
+  position: fixed
+
+  left: 0
+  top: 0
+
+  z-index: 1337
+  width: 100%
+
+  background-color: transparent
+  transition: background-color 250ms
+
+  .container
+    display: flex
+    align-items: center
+
+    padding-block: 30px
+    transition: padding-block 250ms
+
+  .header__logotype svg
+    width: 153px
+    height: 34px
+
+  .header-navigation
+    display: flex
+    align-items: center
+    margin-inline: auto 130px
+
+    &__item:not(:first-child)
+      margin-left: 30px
+
+    &__item_underlined
+      position: relative
+
+      &::after
+        position: absolute
+        bottom: -3px
+
+        display: block
+        content: ''
+
+        width: 100%
+        height: 1px
+
+        background-color: currentColor
+
+  .header-menu
+    display: flex
+    align-items: center
+
+    cursor: pointer
+    user-select: none
+
+    .header-menu__icon
+      margin-left: 12px
+
+      svg
+        width: 24px
+        height: 24px
+
+  .header-navigation,
+  .header-menu
+    font-weight: 500
+
+  &.header_minimized
+    background-color: $color-black
+
+    .container
+      padding-block: 15px

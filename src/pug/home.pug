@@ -1,0 +1,173 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="./styles/home.css")
+    script(defer, src="./scripts/main.js")
+
+    title AI COBRA
+  body
+    include includes/mixins/header.pug
+    +header([
+      { "title": "Brand", "link": "#", "underlined": false },
+      { "title": "Products", "link": "#", "underlined": false },
+      { "title": "Shop", "link": "#", "underlined": false },
+      { "title": "Delivery", "link": "#", "underlined": false }
+    ])
+    
+    section.hero.hero_home
+      .hero-carousel
+        .hero-carousel__wrapper
+          .hero-carousel-slide(style="background-image: url(\"./images/home_hero_carousel_1.avif\")")
+            .container
+              .hero-carousel-slide__text Our robot has been tested on 10,000 hectares -->
+          .hero-carousel-slide(style="background-image: url(\"./images/home_hero_carousel_2.avif\")")
+            .container
+              .hero-carousel-slide__text Our robot has been tested on 10,000 hectares -->
+          .hero-carousel-slide(style="background-image: url(\"./images/home_hero_carousel_3.avif\")")
+            .container
+              .hero-carousel-slide__text Our robot has been tested on 10,000 hectares -->
+        .hero-carousel-pagination.container
+          .hero-carousel-pagination__item
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(clip-path="url(#clip0_10_1154)")
+                g(filter="url(#filter0_b_10_1154)")
+                  circle(cx="10", cy="10", r="9", stroke="white", stroke-opacity="0.3", stroke-width="2")
+                g(filter="url(#filter1_b_10_1154)")
+                  path(d="M10 1C11.78 1 13.5201 1.52784 15.0001 2.51677C16.4802 3.50571 17.6337 4.91131 18.3149 6.55585C18.9961 8.20038 19.1743 10.01 18.8271 11.7558C18.4798 13.5016 17.6226 15.1053 16.364 16.364C15.1053 17.6226 13.5016 18.4798 11.7558 18.8271C10.01 19.1743 8.20038 18.9961 6.55585 18.3149C4.91131 17.6337 3.50571 16.4802 2.51677 15.0001C1.52784 13.5201 1 11.78 1 10", stroke="white", stroke-width="2")
+              defs
+                filter#filter0_b_10_1154(x="-5", y="-5", width="30", height="30", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2.5")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                filter#filter1_b_10_1154(x="-4", y="-4", width="28", height="28", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                clipPath#clip0_10_1154
+                  rect(width="20", height="20", fill="white")
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(filter="url(#filter0_b_10_1158)")
+                circle(cx="10", cy="10", r="3", fill="white")
+              defs
+                filter#filter0_b_10_1158(x="3", y="3", width="14", height="14", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1158")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1158", result="shape")
+          .hero-carousel-pagination__item
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(clip-path="url(#clip0_10_1154)")
+                g(filter="url(#filter0_b_10_1154)")
+                  circle(cx="10", cy="10", r="9", stroke="white", stroke-opacity="0.3", stroke-width="2")
+                g(filter="url(#filter1_b_10_1154)")
+                  path(d="M10 1C11.78 1 13.5201 1.52784 15.0001 2.51677C16.4802 3.50571 17.6337 4.91131 18.3149 6.55585C18.9961 8.20038 19.1743 10.01 18.8271 11.7558C18.4798 13.5016 17.6226 15.1053 16.364 16.364C15.1053 17.6226 13.5016 18.4798 11.7558 18.8271C10.01 19.1743 8.20038 18.9961 6.55585 18.3149C4.91131 17.6337 3.50571 16.4802 2.51677 15.0001C1.52784 13.5201 1 11.78 1 10", stroke="white", stroke-width="2")
+              defs
+                filter#filter0_b_10_1154(x="-5", y="-5", width="30", height="30", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2.5")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                filter#filter1_b_10_1154(x="-4", y="-4", width="28", height="28", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                clipPath#clip0_10_1154
+                  rect(width="20", height="20", fill="white")
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(filter="url(#filter0_b_10_1158)")
+                circle(cx="10", cy="10", r="3", fill="white")
+              defs
+                filter#filter0_b_10_1158(x="3", y="3", width="14", height="14", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1158")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1158", result="shape")
+          .hero-carousel-pagination__item
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(clip-path="url(#clip0_10_1154)")
+                g(filter="url(#filter0_b_10_1154)")
+                  circle(cx="10", cy="10", r="9", stroke="white", stroke-opacity="0.3", stroke-width="2")
+                g(filter="url(#filter1_b_10_1154)")
+                  path(d="M10 1C11.78 1 13.5201 1.52784 15.0001 2.51677C16.4802 3.50571 17.6337 4.91131 18.3149 6.55585C18.9961 8.20038 19.1743 10.01 18.8271 11.7558C18.4798 13.5016 17.6226 15.1053 16.364 16.364C15.1053 17.6226 13.5016 18.4798 11.7558 18.8271C10.01 19.1743 8.20038 18.9961 6.55585 18.3149C4.91131 17.6337 3.50571 16.4802 2.51677 15.0001C1.52784 13.5201 1 11.78 1 10", stroke="white", stroke-width="2")
+              defs
+                filter#filter0_b_10_1154(x="-5", y="-5", width="30", height="30", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2.5")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                filter#filter1_b_10_1154(x="-4", y="-4", width="28", height="28", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1154")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1154", result="shape")
+                clipPath#clip0_10_1154
+                  rect(width="20", height="20", fill="white")
+            svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+              g(filter="url(#filter0_b_10_1158)")
+                circle(cx="10", cy="10", r="3", fill="white")
+              defs
+                filter#filter0_b_10_1158(x="3", y="3", width="14", height="14", filterUnits="userSpaceOnUse", color-interpolation-filters="sRGB")
+                  feFlood(flood-opacity="0", result="BackgroundImageFix")
+                  feGaussianBlur(in="BackgroundImageFix", stdDeviation="2")
+                  feComposite(in2="SourceAlpha", operator="in", result="effect1_backgroundBlur_10_1158")
+                  feBlend(mode="normal", in="SourceGraphic", in2="effect1_backgroundBlur_10_1158", result="shape")
+    section.products-promo.container
+      .products-promo__title Robots accessible to everyone
+      .products-promo-description
+        .products-promo-description__text The holistic concept of AI COBRA combines the disciplines of design, functionality and usability on an unprecedented scale.
+        a.products-promo-description__link.link-button(href="#") Products -->
+    section.container
+      hr
+    section.products.container
+      h4.products__title Products
+      .products-links
+        a.products-links-item(href="#")
+          .products-links-item__text Automation systems & stream transportation platforms
+          .products-links-item__arrow -->
+        hr
+        a.products-links-item(href="#")
+          .products-links-item__text Integration solutions for warehouses, retail & manufacturing
+          .products-links-item__arrow -->
+        hr
+        a.products-links-item(href="#")
+          .products-links-item__text Logistics robots and delivery systems — Logistics & Delivery systems
+          .products-links-item__arrow -->
+        hr
+        a.products-links-item(href="#")
+          .products-links-item__text HoReCa & Drive through solutions
+          .products-links-item__arrow -->
+        hr
+        a.products-links-item(href="#")
+          .products-links-item__text Home & Kids Robots & Toy Robots — Domestic & Toy robots
+          .products-links-item__arrow -->
+        hr
+    section.brand.container
+      .brand-content
+        h4.brand__title Brand
+        .brand__description Our mission is to bring robotic solutions to the lives of people and companies.
+        a.brand__link.link-button(href="#") About us -->
+      .brand-carousel
+        .brand-carousel__wrapper
+          .brand-carousel__slide
+            img(src="./images/home_brand_carousel_1.avif", alt="")
+          .brand-carousel__slide
+            img(src="./images/home_brand_carousel_2.avif", alt="")
+          .brand-carousel__slide
+            img(src="./images/home_brand_carousel_3.avif", alt="")
+        .brand-carousel-navigation
+          .brand-carousel-navigation__arrow.brand-carousel-pagination__arrow_left
+            svg(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M21 12L4 12M4 12L10 18M4 12L10 6", stroke="white", stroke-width="2")
+
+          .brand-carousel-navigation__arrow.brand-carousel-pagination__arrow_right
+            svg(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M3 12H20M20 12L14 6M20 12L14 18", stroke="white", stroke-width="2")
+    
+    include includes/footer.pug
