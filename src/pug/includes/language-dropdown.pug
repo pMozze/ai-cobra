@@ -1,0 +1,45 @@
+include mixins/language.pug
+
+.language-dropdown
+  .language-dropdown__content
+    +language("usa", "English (USA)")
+    
+  .language-dropdown__arrow
+    svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+      path(d="M7.5 10.5L12 15L16.5 10.5", stroke="white", stroke-width="1.5")
+
+  .language-dropdown__menu.menu
+    .menu-item.menu-item_active(data-id="usa")
+      .menu-item__content
+        +language("usa", "English (USA)")
+      .menu-item__icon
+        svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M6.5 11.5L10 15L17.5 7.5", stroke="white", stroke-width="1.5")
+    
+    .menu-item
+      .menu-item__content(data-id="france")
+        +language("france", "Français")
+      .menu-item__icon
+        svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M6.5 11.5L10 15L17.5 7.5", stroke="white", stroke-width="1.5")
+
+    .menu-item
+      .menu-item__content(data-id="germany")
+        +language("germany", "Deutsche")
+      .menu-item__icon
+        svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M6.5 11.5L10 15L17.5 7.5", stroke="white", stroke-width="1.5")
+
+    .menu-item
+      .menu-item__content(data-id="spain")
+        +language("spain", "Español")
+      .menu-item__icon
+        svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M6.5 11.5L10 15L17.5 7.5", stroke="white", stroke-width="1.5")
+          
+    .menu-item
+      .menu-item__content(data-id="russia")
+        +language("russia", "Русский")
+      .menu-item__icon
+        svg(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M6.5 11.5L10 15L17.5 7.5", stroke="white", stroke-width="1.5")

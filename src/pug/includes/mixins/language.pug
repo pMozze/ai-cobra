@@ -1,0 +1,7 @@
+include country-flag.pug
+
+mixin language(country, name)
+  .language
+    .language__icon
+      +country_flag(country)
+    .language__text= name

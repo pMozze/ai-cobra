@@ -1,0 +1,130 @@
+.hamburger-menu
+  display: none
+
+  position: fixed
+  z-index: 1337
+
+  top: 0
+  left: 0
+
+  width: 100vw
+  height: 100vh
+
+  overflow-y: auto
+  background-color: $color-black
+
+  .hm-header
+    display: flex
+
+    &__logotype svg
+      width: 153px
+      height: 34px
+
+    &-menu
+      display: flex
+      align-items: center
+
+      margin-left: auto
+      cursor: pointer
+
+      &__text
+        font-size: 16px
+        font-weight: 500
+        line-height: 24px
+
+      &__icon
+        margin-left: 12px
+
+        svg
+          width: 24px
+          height: 24px
+
+  &__wrapper
+    padding: 100px 100px 100px 120px
+
+  .row
+
+    display: grid
+    grid-template-columns: 705px 1fr
+
+    &:last-child
+      margin-top: 130px
+
+  .navigation
+    display: flex
+    flex-direction: column
+    row-gap: 30px
+
+    font-size: 75px
+    font-weight: 500
+    line-height: 85px
+
+  .navigation-content
+    position: relative
+
+    &__default
+      display: flex
+      flex-direction: column
+      height: 100%
+
+      .links
+        display: flex
+        flex-direction: column
+        row-gap: 30px
+
+        font-size: 20px
+        line-height: 30px
+
+      .contact-us
+        margin-top: auto
+
+        &__title
+          font-size: 20px
+          line-height: 30px
+
+        &__email
+          margin-bottom: 5px
+          font-size: 40px
+          line-height: 50px
+
+  .brand-logotype,
+  .products-image,
+  .shop-image,
+  .delivery-logotypes
+    position: absolute
+    z-index: 1
+
+    top: 50%
+    right: 0
+
+    transform: translateY(-50%)
+
+  .brand-logotype svg
+    width: 460px
+    height: 460px
+
+  .products-image,
+  .shop-image
+    width: 640px
+    height: 420px
+
+    background-size: cover
+    background-position: center
+
+  .delivery-logotypes
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+
+    &__item
+      display: flex
+      padding: 20px
+
+      width: 200px
+      height: 200px
+
+      border-radius: 2px
+      background-color: rgba($color-gray, .12)
+
+      svg
+        margin: auto

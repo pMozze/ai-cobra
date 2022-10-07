@@ -21,7 +21,8 @@ gulp.task('watch', () => {
       .pipe(pug({
         pretty: true
       }))
-      .pipe(gulp.dest('./build'));
+      .pipe(gulp.dest('./build'))
+      .pipe(browserSync.stream());
   });
 
   gulp.watch('./src/scripts/*.js', { ignoreInitial: false }, () => {
@@ -30,13 +31,15 @@ gulp.task('watch', () => {
         mode: 'development',
         entry: './src/scripts/main.js'
       }))
-      .pipe(gulp.dest('./build/scripts'));
+      .pipe(gulp.dest('./build/scripts'))
+      .pipe(browserSync.stream());
   });
 
   gulp.watch('./src/sass/**/*.sass', { ignoreInitial: false }, () => {
     return gulp.src('./src/sass/**/*.sass')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./build/styles'));
+      .pipe(gulp.dest('./build/styles'))
+      .pipe(browserSync.stream());
   });
 
   gulp.watch('./src/fonts/*', { ignoreInitial: false }, () => {

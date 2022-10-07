@@ -1,0 +1,77 @@
+.language-dropdown
+  position: relative
+
+  display: flex
+  align-items: center
+
+  width: fit-content
+
+  &__content
+    cursor: pointer
+    user-select: none
+
+  &__arrow
+    margin-left: 3px
+    cursor: pointer
+
+    svg
+      width: 24px
+      height: 24px
+      transition: transform 250ms
+
+  .language-dropdown__menu
+    position: absolute
+
+    bottom: calc(100% + 15px)
+    left: 50%
+
+    display: none
+    padding: 10px
+
+    backdrop-filter: blur(30px)
+    background-color: rgba($color-gray, .15)
+
+    border-radius: 15px
+    transform: translateX(-50%)
+
+  .menu
+    &-item
+      display: flex
+      align-items: center
+
+      padding: 5px 10px
+      border-radius: 5px
+
+      cursor: pointer
+      transition: background-color 250ms
+
+      &:hover
+        background-color: rgba($color-gray, .15)
+
+      &__content
+        margin-right: 15px
+
+        font-size: 20px
+        line-height: 30px
+
+        white-space: nowrap
+        user-select: none
+
+      &__icon
+        opacity: 0
+        margin-left: auto
+        transition: opacity 250ms
+
+        svg
+          width: 24px
+          height: 24px
+
+    &-item_active .menu-item__icon
+      opacity: 1
+
+.language-dropdown_shown
+  .language-dropdown__arrow svg
+    transform: rotateZ(-180deg)
+
+  .language-dropdown__menu
+    display: block
