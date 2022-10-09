@@ -1,0 +1,23 @@
+@media screen and (max-width: $breakpoint-desktop - 1px)
+  .footer
+    &__row
+      display: block
+
+      &:nth-child(2)
+        margin-block: 60px
+
+      &:last-child
+        flex-direction: column
+
+    &__links
+      flex-direction: column
+      margin-top: 60px !important
+
+      .links-group:not(:first-child)
+        margin: 40px 0 0 0 !important
+
+    &__text:not(:first-child)
+      margin: 15px 0 0 0 !important
+
+    .social-icons
+      margin-top: 30px

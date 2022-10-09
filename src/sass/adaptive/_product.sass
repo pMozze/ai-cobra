@@ -1,0 +1,76 @@
+@media screen and (max-width: $breakpoint-desktop - 1px)
+  .hero-carousel-pagination
+    padding-inline: 0
+    width: fit-content
+
+  .product
+    align-items: flex-start
+    flex-direction: column
+
+    &__title
+      font-size: 32px !important
+      line-height: 42px !important
+
+    &-price
+      margin-top: 35px
+
+      &__from
+        text-align: start !important
+
+  .promo-1
+    padding-block: 80px
+    align-items: flex-start
+    flex-direction: column
+
+    &-image
+      width: 100%
+      height: auto
+
+    &-content
+      margin: 50px 0 0 0
+
+      &__description
+        margin-top: 10px
+
+  .promo-2
+    &__wrapper
+      padding: 30px
+      height: initial
+
+    &-content
+      padding: 25px
+
+      &__description
+        max-width: unset
+        margin-top: 10px
+
+        font-size: 24px
+        line-height: 34px
+
+  .form
+    padding-block: 80px
+    grid-template-columns: 1fr
+    row-gap: 50px
+
+    &__content .button
+      width: 100%
+
+  .next-product
+    padding-block: 60px
+
+    &__wrapper
+      margin-top: 10px
+
+      &:hover
+        .next-product__image
+          width: 0
+
+        .next-product__link
+          padding-left: 0
+
+    &__link
+      display: flex
+      align-items: center
+
+      font-size: 30px
+      line-height: 40px

@@ -1,42 +1,34 @@
 @import './base/main'
 
 .products
-  &__outer
-    position: relative
-    overflow: hidden
-
-  &__inner
-    padding-block: 90px 40px
+  padding-block: 90px 40px
 
   &-item
+    display: flex
+    align-items: center
+
     width: fit-content
 
     margin-inline: auto
     padding: 10px 20px
 
+    font-size: 32px
+    line-height: 45px
+
     transition: background-color 250ms
     border-radius: 10px
 
-    &__text
-      position: relative
-      z-index: 1
+    &__arrow
+      width: 0
+      opacity: 0
+      transition: width 250ms, opacity 250ms
 
-      font-size: 32px
-      line-height: 45px
-
-      &::after
-        display: inline-block
-        content: '\00a0-->'
-
-        width: 0
-        opacity: 0
-
-        transition: width 250ms, opacity 250ms
-
-      &:hover::after
-        width: 1em
-        opacity: 1
+    &:hover &__arrow
+      width: 1em
+      opacity: 1
 
     &:hover
       background-color: rgba($color-gray, .15)
       backdrop-filter: blur(15px)
+
+@import 'adaptive/products'

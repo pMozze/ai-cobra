@@ -44,10 +44,19 @@ new Swiper('.hero.hero_product .hero-carousel', {
 new Swiper('.brand-carousel', {
   wrapperClass: 'brand-carousel__wrapper',
   slideClass: 'brand-carousel__slide',
-  slidesPerView: 1.5,
-  spaceBetween: 50,
   navigation: {
     prevEl: '.brand-carousel-navigation__arrow.brand-carousel-navigation__arrow_left',
     nextEl: '.brand-carousel-navigation__arrow.brand-carousel-navigation__arrow_right'
+  },
+
+  breakpoints: {
+    1439: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    1440: {
+      slidesPerView: 1.5,
+      spaceBetween: 50
+    }
   }
 });

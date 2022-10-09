@@ -19,18 +19,21 @@ html
     ])(class="header_indent-body")
 
     .products.container
-      .products__outer
-        .products__inner
-          .products-item
-            .products-item__image(style="background-image: url(\"./images/products_1.png\")")
-            a.products-item__text(href="#") Automation systems & stream transportation platforms
-          .products-item
-            a.products-item__text(href="#") Integration solutions for warehouses, retail & manufacturing
-          .products-item
-            a.products-item__text(href="#") Logistics robots and delivery systems — Logistics & Delivery systems
-          .products-item
-            a.products-item__text(href="#") HoReCa & Drive through solutions
-          .products-item
-            a.products-item__text(href="#") Home & Kids Robots & Toy Robots — Domestic & Toy robots
+      a.products-item(href="#")
+        .products-item__text Automation systems & stream transportation platforms
+        .products-item__arrow &nbsp;-->
+      a.products-item(href="#")
+        .products-item__text Integration solutions for warehouses, retail & manufacturing
+        .products-item__arrow &nbsp;-->
+      a.products-item(href="#")
+        .products-item__text Logistics robots and delivery systems — Logistics & Delivery systems
+        .products-item__arrow &nbsp;-->
+      a.products-item(href="#")
+        .products-item__text HoReCa & Drive through solutions
+        .products-item__arrow &nbsp;-->
+      a.products-item(href="#")
+        .products-item__text Home & Kids Robots & Toy Robots — Domestic & Toy robots
+        .products-item__arrow &nbsp;-->
     
     include includes/footer.pug
+    include includes/hamburger-menu.pug
