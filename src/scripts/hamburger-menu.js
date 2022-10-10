@@ -3,8 +3,9 @@ const hamburgerMenu = document.getElementById('hamburger-menu');
 const hamburgerMenuHeader = document.querySelector('.hm-header');
 
 document.querySelector('.header .header-menu').addEventListener('click', () => {
-  const paddingBlock = window.getComputedStyle(header).paddingBlock;
-  hamburgerMenuHeader.style.setProperty('padding-block', paddingBlock);
+  const paddingTop = window.getComputedStyle(header).paddingTop;
+  hamburgerMenuHeader.style.setProperty('padding-top', paddingTop);
+  hamburgerMenuHeader.style.setProperty('padding-bottom', paddingTop);
 
   document.getElementById('hamburger-menu').style.setProperty('display', 'block');
   document.body.style.setProperty('overflow-y', 'hidden');
@@ -16,8 +17,9 @@ document.querySelector('.hm-header .hm-header-menu').addEventListener('click', (
 });
 
 header.addEventListener('transitionend', () => {
-  const paddingBlock = window.getComputedStyle(header).paddingBlock;
-  hamburgerMenuHeader.style.setProperty('padding-block', paddingBlock);
+  const paddingTop = window.getComputedStyle(header).paddingTop;
+  hamburgerMenuHeader.style.setProperty('padding-top', paddingTop);
+  hamburgerMenuHeader.style.setProperty('padding-bottom', paddingTop);
 });
 
 const itemBrand = hamburgerMenu.querySelector('.navigation__item.navigation__item_brand');

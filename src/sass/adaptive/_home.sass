@@ -4,7 +4,8 @@
       display: flex
 
       .container
-        margin-block: auto 110px
+        margin-top: auto
+        margin-bottom: 110px
 
       &__text
         position: static
@@ -16,7 +17,8 @@
         text-align: center
 
     &-pagination
-      padding-inline: 0
+      padding-left: 0
+      padding-right: 0
       width: fit-content
 
   .products-promo
@@ -29,20 +31,30 @@
         max-width: unset
 
   .products
-    padding-block: 82px
+    padding-top: 82px
+    padding-bottom: 82px
 
     &-links
       margin-top: 10px
 
+      .animation-image
+        display: none !important
+
       &-item
-        padding-block: 30px
+        padding-top: 30px
+        padding-bottom: 30px
+
+        &:hover
+          padding-left: 15px
+          padding-right: 15px
 
         &__text
           font-size: 22px
           line-height: 32px
 
   .brand
-    padding-block: 30px
+    padding-top: 30px
+    padding-bottom: 30px
     flex-direction: column
 
     &__link

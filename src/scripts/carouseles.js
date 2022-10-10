@@ -5,10 +5,10 @@ new Swiper('.hero.hero_home .hero-carousel', {
   wrapperClass: 'hero-carousel__wrapper',
   slideClass: 'hero-carousel-slide',
   loop: true,
-  autoplay: {
-    delay: 7500,
-    disableOnInteraction: false
-  },
+  // autoplay: {
+  //   delay: 7500,
+  //   disableOnInteraction: false
+  // },
   pagination: {
     el: '.hero-carousel-pagination',
     bulletClass: 'hero-carousel-pagination__item',

@@ -14,8 +14,9 @@
     display: flex
     align-items: center
 
-    padding-block: 30px
-    transition: padding-block 250ms
+    padding-top: 30px
+    padding-bottom: 30px
+    transition: padding-top 250ms, padding-bottom 250ms
 
   .header__logotype svg
     width: 153px
@@ -24,7 +25,8 @@
   .header-navigation
     display: flex
     align-items: center
-    margin-inline: auto 130px
+    margin-left: auto
+    margin-right: 130px
 
     &__item:not(:first-child)
       margin-left: 30px
@@ -66,6 +68,7 @@
     background-color: $color-black
 
     .container
-      padding-block: 15px
+      padding-top: 15px
+      padding-bottom: 15px
 
 @import '../adaptive/layout/header'
