@@ -7,9 +7,47 @@ const dartSass = require('sass');
 const gulpSass = require('gulp-sass');
 const sass = gulpSass(dartSass);
 
+const fileSystem = require('fs');
 const browserSync = require('browser-sync');
 
+gulp.task('build', callBack => {
+  fileSystem.rmSync('./build', {
+    recursive: true,
+    force: true
+  });
+
+  gulp.src('./src/pug/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./build'));
+
+  gulp.src('./src/scripts/*.js')
+    .pipe(webpack({
+      mode: 'development',
+      entry: './src/scripts/main.js'
+    }))
+    .pipe(gulp.dest('./build/scripts'));
+
+  gulp.src('./src/sass/**/*.sass')
+    .pipe(sass())
+    .pipe(gulp.dest('./build/styles'));
+
+  gulp.src('./src/fonts/*')
+    .pipe(gulp.dest('./build/fonts'));
+
+  gulp.src('./src/images/*')
+    .pipe(gulp.dest('./build/images'));
+
+  callBack();
+});
+
 gulp.task('watch', () => {
+  fileSystem.rmSync('./build', {
+    recursive: true,
+    force: true
+  });
+
   browserSync.create();
   browserSync.init({
     open: false,
